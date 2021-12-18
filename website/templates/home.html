@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+
+<h1 align="center">Inmunización con vacuna DPT (% de niños entre 12 y 23 meses de edad) </h1>
+<h5> Country: Panamá </h5>
+<h5> Code: PAN </h5>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Año</th>
+      <th scope="col">Porcentaje</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    {% for dict_item in vacunas %}
+    <tr>
+        
+        <th scope="row">{{dict_item['year'] }}</th>
+        <th scope="row">{{dict_item['porcentage'] }}</th>
+  </tr>   
+  {% endfor %}
+    
+  </tr>   
+ 
+      
+     
+   
+  </tbody>
+</table>
+
+{% endblock %}
